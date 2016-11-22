@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MarvelProject</string>
+    <string name="historiaMarvel">Marvel Worldwide, Inc. es una editorial de cómics estadounidense creada en 1939,
+        inicialmente con el nombre de Timely Comics. Entre sus personajes emblemáticos del género superheroico
+        se encuentran Spider-Man, Capitán América, Iron Man, Hulk, Thor, Deadpool, Avengers,Wolverine, Daredevil,
+        y los X-Men, entre otros.
+
+        Los Origenes: La editorial que posteriormente sería conocida como Marvel Comics nació en 1939 con el nombre de Timely Publication de la mano de un joven empresario de 31 años
+        llamado Martin Goodman, que había comenzado su carrera como empresario a los 29 años,
+        con una pequeña editorial de revistas pulp llamada Western Fiction Publishing. 
+    </string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
