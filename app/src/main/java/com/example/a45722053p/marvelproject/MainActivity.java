@@ -1,5 +1,6 @@
 package com.example.a45722053p.marvelproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -59,6 +60,10 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Intent intent = new Intent(this,SettingsActivity.class);
+             startActivity(intent);
+
             return true;
         }
 
@@ -71,19 +76,51 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.historia) {
 
-        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
+            Intent intent = new Intent(this,MainActivity.class);
 
-        } else if (id == R.id.nav_share) {
+            startActivity(intent);
 
-        } else if (id == R.id.nav_send) {
+            //Debera abrir el activity de la historia (MainActivity)
+
+
+        } else if (id == R.id.personajes) {
+
+            //Aquí deberia abrir el activity de los personajes (CharactersActivity)
+
+
+
+
+
+        } else if (id == R.id.comics) {
+
+            //Abriremos la activity de los comics (ComicsActivity)
+
+
+
+
+        } else if (id == R.id.peliculas) {
+
+            //La activity de Peliculas (MoviesActivity)
+
+
+
+        } else if (id == R.id.pageOficial) {
+
+            //Abriremos la activity de la pagina oficial (PageActivity)
+
+
+
+        } else if (id == R.id.redesSociales) {
+
+
+            //Y por ultimo aqui abriremos la activity de las redes sociales oficiales (RSActivity)
+
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
