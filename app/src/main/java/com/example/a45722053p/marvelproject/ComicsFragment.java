@@ -9,20 +9,14 @@ import android.view.ViewGroup;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class CharactersFragment extends Fragment {
+public class ComicsFragment extends Fragment {
 
-    public CharactersFragment() {
+    public ComicsFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View charactersFragment =  inflater.inflate(R.layout.fragment_characters, container, false);
-
-
-
-        return charactersFragment;
-
-
+        return inflater.inflate(R.layout.fragment_comics, container, false);
     }
 }

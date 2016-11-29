@@ -89,4 +89,6 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_characters">Characters</string>
+    <string name="title_activity_comics">Comics</string>
+    <string name="title_activity_creators">Creators</string>
 </resources>

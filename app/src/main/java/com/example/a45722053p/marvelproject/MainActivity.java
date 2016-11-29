@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        } else if (id == R.id.peliculas) {
+        } else if (id == R.id.creadores) {
 
             //La activity de Peliculas (MoviesActivity)
 

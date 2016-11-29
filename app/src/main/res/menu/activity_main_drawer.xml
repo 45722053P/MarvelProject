@@ -15,9 +15,9 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Comics" />
         <item
-            android:id="@+id/peliculas"
+            android:id="@+id/creadores"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Peliculas" />
+            android:title="Creadores" />
     </group>
 
     <item android:title="Sitios Oficiales">
