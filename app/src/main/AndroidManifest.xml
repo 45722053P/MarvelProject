@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.a45722053p.marvelproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logoapp"
@@ -27,7 +30,7 @@
                 android:value="com.example.a45722053p.marvelproject.MainActivity" />
         </activity>
         <activity
-            android:name=".Characters"
+            android:name=".CharactersActivity"
             android:label="@string/title_activity_characters"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -36,7 +39,7 @@
                 android:value="com.example.a45722053p.marvelproject.MainActivity" />
         </activity>
         <activity
-            android:name=".Comics"
+            android:name=".ComicsActivity"
             android:label="@string/title_activity_comics"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -45,7 +48,7 @@
                 android:value="com.example.a45722053p.marvelproject.MainActivity" />
         </activity>
         <activity
-            android:name=".Creators"
+            android:name=".CreatorsActivity"
             android:label="@string/title_activity_creators"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

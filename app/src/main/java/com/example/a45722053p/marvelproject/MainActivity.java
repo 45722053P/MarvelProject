@@ -2,9 +2,6 @@ package com.example.a45722053p.marvelproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -90,6 +87,9 @@ public class MainActivity extends AppCompatActivity
 
             //Aquí deberia abrir el activity de los personajes (CharactersActivity)
 
+            Intent intent = new Intent(this,CharactersActivity.class);
+
+            startActivity(intent);
 
 
 
@@ -98,6 +98,9 @@ public class MainActivity extends AppCompatActivity
 
             //Abriremos la activity de los comics (ComicsActivity)
 
+            Intent intent = new Intent(this,ComicsActivity.class);
+
+            startActivity(intent);
 
 
 
@@ -105,6 +108,9 @@ public class MainActivity extends AppCompatActivity
 
             //La activity de Peliculas (MoviesActivity)
 
+            Intent intent = new Intent(this,CreatorsActivity.class);
+
+            startActivity(intent);
 
 
         } else if (id == R.id.pageOficial) {
