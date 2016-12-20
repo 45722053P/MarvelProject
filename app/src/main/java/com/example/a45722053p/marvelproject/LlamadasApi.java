@@ -20,12 +20,15 @@ public class LlamadasApi {
     private static final String BASE_URL = "https://gateway.marvel.com/v1/public";
     private static final String API_KEY = "9bae9e9f47d82bd36e8d9f0aabea2d0d";
     private static final String HASH = "689fdd3eb68f4e6e5f2147fdda70538a";
-    private static final int TIMESTAMP = 1;
+    private static final String TIMESTAMP = "1";
 
     static ArrayList<Character> getCharacters() {
         Uri builtUri = Uri.parse(BASE_URL)
                 .buildUpon()
                 .appendPath("characters")
+                .appendQueryParameter("apikey",API_KEY)
+                .appendQueryParameter("hash",HASH)
+                .appendQueryParameter("ts",TIMESTAMP)
                 .build();
         String url = builtUri.toString();
 
