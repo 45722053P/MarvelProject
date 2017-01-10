@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public class Character implements Serializable {
 
-    int id;
+    String id;
     String name;
     String description;
     String comics;
@@ -17,11 +17,11 @@ public class Character implements Serializable {
     String ImageUrl;
 
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

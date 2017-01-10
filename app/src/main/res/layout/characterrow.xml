@@ -10,12 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/nameCharacter"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/imageCharacter"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="224dp" />
 
     <TextView
         android:layout_width="wrap_content"

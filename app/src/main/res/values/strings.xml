@@ -91,4 +91,6 @@
     <string name="title_activity_characters">Personajes</string>
     <string name="title_activity_comics">Comics</string>
     <string name="title_activity_creators">Creadores</string>
+    <string name="refreshButton">Refresh</string>
+
 </resources>

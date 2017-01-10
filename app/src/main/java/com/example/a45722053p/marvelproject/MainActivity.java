@@ -1,6 +1,7 @@
 package com.example.a45722053p.marvelproject;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -8,8 +9,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +33,14 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+       // refresh();
+
     }
 
     @Override
@@ -62,6 +74,9 @@ public class MainActivity extends AppCompatActivity
              startActivity(intent);
 
             return true;
+        }else if (id== R.id.refreshbutton){
+
+            //refresh();
         }
 
         return super.onOptionsItemSelected(item);
@@ -132,4 +147,28 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+//    private void refresh(){
+//
+//        refreshBackground refreshBackground = new refreshBackground();
+//
+//        refreshBackground.execute();
+//
+//    }
+//
+//
+//    private class refreshBackground extends AsyncTask<Void,Void,Void>{
+//
+//        @Override
+//        protected Void doInBackground(Void... params) {
+//
+//            LlamadasApi api = new LlamadasApi();
+//            ArrayList<Character> result = api.getCharacters();
+//            Log.d("DEBUG",result.toString());
+//
+//            return null;
+//        }
+//    }
+
+
+
 }
