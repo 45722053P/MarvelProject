@@ -10,21 +10,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.a45722053p.marvelproject.example.Result;
 
-
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by 45722053p on 20/12/16.
  */
 
-public class CharacterAdapter extends ArrayAdapter<Character> {
+public class CharacterAdapter extends ArrayAdapter<Result> {
 
         TextView name,descripcion;
 
         ImageView Image;
 
-        public CharacterAdapter(Context context, int resource, List<Character> objects) {
+        public CharacterAdapter(Context context, int resource, ArrayList<Result> objects) {
                 super(context, resource, objects);
 
         }
@@ -32,7 +32,7 @@ public class CharacterAdapter extends ArrayAdapter<Character> {
         public View getView(int position, View convertView, ViewGroup parent) {
 
                 // Obtenim l'objecte en la possició corresponent
-                Character character = getItem(position);
+                Result character = getItem(position);
                 Log.w("XXXX", character.toString());
 
                 // Mirem a veure si la View s'està reusant, si no es així "inflem" la View
@@ -51,7 +51,7 @@ public class CharacterAdapter extends ArrayAdapter<Character> {
                 // Fiquem les dades dels objectes (provinents del JSON) en el layout
                 name.setText(character.getName());
                 descripcion.setText(character.getDescription());
-                Glide.with(getContext()).load(character.getImageUrl()).into(Image);
+                Glide.with(getContext()).load(character.getThumbnail()).into(Image);
 
                 // Retornem la View replena per a mostrarla
                 return convertView;

@@ -1,10 +1,9 @@
 package com.example.a45722053p.marvelproject;
 
-import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -12,10 +11,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.GridView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -24,7 +23,7 @@ public class CharactersFragment extends Fragment {
 
 
     private ArrayList<Character> items;
-    private CharacterAdapter adapter;
+    private ArrayAdapter<Character> adapter;
 
     public CharactersFragment() {
     }
@@ -34,6 +33,7 @@ public class CharactersFragment extends Fragment {
         super.onStart();
 
         refresh();
+
 
     }
     @Override
@@ -56,20 +56,12 @@ public class CharactersFragment extends Fragment {
 
         GridView gridViewCharacters = (GridView)charactersFragment.findViewById(R.id.gridCharacters);
 
-//        String [] data = {
-//          "ASDVAJDFJGSKHKJASHGJKH",
-//                "SFSDFSFSDFSDF",
-//                "ASFSDFSDFSDF"
-//
-//
-//        };
-
-
         items = new ArrayList<>();
 
-        adapter = new CharacterAdapter(
+        adapter = new ArrayAdapter<>(
                 getContext(),
                 R.layout.characterrow,
+                R.id.nameCharacter,
                 items
         );
 
@@ -103,20 +95,32 @@ public class CharactersFragment extends Fragment {
 
         refreshBackground.execute();
 
+        Log.d("DEBUGCHARACTEAGMENTS", "HOLAAA");
+
     }
 
 
-    private class refreshBackground extends AsyncTask<Void,Void,Void> {
+    private class refreshBackground extends AsyncTask<Void,Void,ArrayList<Character>> {
 
         @Override
-       protected Void doInBackground(Void... params) {
+       protected ArrayList<Character> doInBackground(Void... params) {
 
             LlamadasApi api = new LlamadasApi();
             ArrayList<Character> result = api.getCharacters();
-            Log.d("DEBUGCHARACTEAGMENTS",result.toString());
 
-            return null;
+            Log.d("DEBUG",result.toString());
+
+            return result;
         }
+//
+//        @Override
+//        protected void onPostExecute(ArrayList<Character> characters) {
+//
+//            adapter.clear();
+//            for(Character perso : characters){
+//                adapter.add(perso);
+//            }
+//        }
     }
 
 }

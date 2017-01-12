@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * Created by 45722053p on 29/11/16.
  */
 
-public class LlamadasApi {
+class LlamadasApi {
 
 
     private static final String BASE_URL = "https://gateway.marvel.com/v1/public";
@@ -56,22 +56,31 @@ public class LlamadasApi {
         try {
 
             JSONObject datas = new JSONObject(jsonResponse);
-            Log.d("AASDADASDASD", datas.toString());
+
+            Log.d("RESPONSE", datas.toString());
 
             JSONArray jsonPersonajes = datas.getJSONArray("data");
 
+            Log.d("ARRAY 1", jsonPersonajes.toString() );
 
-            for (int i = 0; i < jsonPersonajes.length(); i++) {
+
+
+
+            for (int i = 0; i < 5; i++) {
+
                 JSONObject jsonPersonaje = jsonPersonajes.getJSONObject(i);
 
                 Character personaje = new Character();
-//                personaje.setId(jsonPersonaje.getInt("id"));
+
+                personaje.setId(jsonPersonaje.getInt("id"));
                 personaje.setName(jsonPersonaje.getString("name"));
                 personaje.setDescription(jsonPersonaje.getString("description"));
 //                personaje.setComics(jsonPersonaje.getString("comics"));
 //                personaje.setSeries(jsonPersonaje.getString("series"));
 //                personaje.setStories(jsonPersonaje.getString("stories"));
-                personaje.setImageUrl(jsonPersonaje.getString("thumbnail"+"extension"));
+
+
+                Log.d("personajess", personaje.toString());
 
 
                 personajes.add(personaje);
